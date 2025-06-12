@@ -307,10 +307,3 @@ Consulta el archivo [LICENSE.md](LICENSE.md) para más detalles.
 **Francisco Javier Loscos Gil**  
 Proyecto final – IES Pablo Serrano, 2024  
 Email: meterre@gmail.com
-
----
-
-## Enlaces
-
-- [Presentación del proyecto (PPTX)](assets/LoscosGil_FranciscoJavier_Presentacion_AppCauldron.pptx)
-- [Documentación técnica (PDF)](assets/Loscos_Gil_FranciscoJavier_Memoria_Proyecto.pdf)
