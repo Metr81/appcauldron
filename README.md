@@ -28,6 +28,8 @@ Adicionalmente, desde la propia interfaz web podremos:
 
 Se ha trabajado en una forma modular que permita escalar fácilmente la cantidad de servicios, su puesta en marcha y su documentación a través de la carpeta templates del proyecto.
 
+Mira el video en [YouTube](https://www.youtube.com/watch?v=cmRlwfBTbLg)
+
 Mejoras que se querrían añadir en un futuro:
 
 - Apartado visual.
@@ -44,7 +46,7 @@ Mejoras que se querrían añadir en un futuro:
 
 ---
 
-## 🧩 Funcionamiento
+## Funcionamiento
 
 En el menú "The Cauldron" (Ilustración A) seleccionamos los servicios que queremos iniciar.
 
@@ -67,7 +69,7 @@ Se ha realizado un trabajo de configuración y revisión de puertos para que pue
 Para llevar más allá a AppCauldron, desde el menú “Hechizos” (Ilustración B) se han habilitado botones para lanzar el comando docker-compose con nuestro archivo generado, iniciando así los servicios en contenedores.
 
 <p align="center">
-  <img src="assets/IlustracionA.png" alt="Ilustración B"/>
+  <img src="assets/IlustracionB.png" alt="Ilustración B"/>
   <br>
   <em>Ilustración B - Vista de la página 'Hechizos'.</em>
 </p>
@@ -77,7 +79,7 @@ Adicionalmente, podemos parar los servicios, reanudarlos, eliminar los contenedo
 Desde el menú Grimorio (Ilustración C), podemos consultar la información (el archivo grimoire.txt generado previamente) para revisar que el servicio o servicios seleccionados están funcionando.
 
 <p align="center">
-  <img src="assets/IlustracionA.png" alt="Ilustración C"/>
+  <img src="assets/IlustracionC.png" alt="Ilustración C"/>
   <br>
   <em>Ilustración C - Vista de la página 'Grimorio'.</em>
 </p>
@@ -87,7 +89,7 @@ Se puede acceder a la información de puertos, usuarios, contraseñas y comandos
 Finalmente, desde el menú Contemplar el Universo (Ilustración D), se puede consultar la salida de los principales comandos que se utilizan en Docker y que se lanzan a través de scripts por el usuario www-data.
 
 <p align="center">
-  <img src="assets/IlustracionA.png" alt="Ilustración D"/>
+  <img src="assets/IlustracionD.png" alt="Ilustración D"/>
   <br>
   <em>Ilustración D - Vista de la página 'Contemplar el Universo'.</em>
 </p>
@@ -96,99 +98,22 @@ Es posible eliminar parte o toda la información de los contenedores, volúmenes
 
 Se ha trabajado en una forma modular que permita escalar fácilmente la cantidad de servicios, su puesta en marcha y su documentación a través de la carpeta templates del proyecto, como se puede observar en la Ilustración E.
 
-
-- Generación automática de configuración `docker-compose.yaml` según servicios seleccionados.
-- Documentación dinámica de los servicios (usuarios, contraseñas, enlaces).
-- Scripts Bash para lanzar, detener, eliminar y consultar contenedores.
-- Interfaz web estructurada:  
-  - **El Caldero:** selecciona servicios  
-  - **Hechizos:** gestiona contenedores  
-  - **Grimorio:** consulta información  
-  - **Contemplar el universo:** monitoriza estado de Docker
+<p align="center">
+  <img src="assets/IlustracionE.png" alt="Ilustración E"/>
+  <br>
+  <em>Ilustración E - Directorio /var/www/html/appcauldron.com</em>
+</p>
 
 ---
 
-## 🗃️ Estructura del Proyecto
-```
-appcauldron/
-├── /var/www/html/appcauldron.com/
-                      ├── index.html
-                      ├── cauldron.html
-                      ├── cauldron2.php
-                      ├── spells.php
-                      ├── grimoire.php
-                      ├── commands.php
-                      ├── info.html
-                      └── templates/
-                          ├── database
-                          ├── database.volumes
-                          ├── database.info
-                          ├── nginx
-                          ├── nginx.info
-                          ├── ftp
-                          ├── ftp.info
-                          ├── netdata
-                          ├── netdata.volumes
-                          ├── netdata.info
-                          ├── lms
-                          ├── lms.volumes
-                          ├── lms.info
-                          ├── jitsi
-                          ├── jitsi.info
-                          ├── wordpress
-                          ├── wordpress.volumes
-                          ├── wordpress.info
-                          ├── office
-                          └── office.info
-                      └── generatedfiles/
-                          └── .env
-                      └── scripts/
-                          # Ejecución en /var/www/html/appcauldron/cauldron2.php
-                          ├── magic_cauldron.sh
-                          # Botones /var/www/html/appcauldron.com/spells.php
-                          ├── cast_spell.sh
-                          ├── stop_spell.sh
-                          ├── resume_spell.sh
-                          ├── undo_spell.sh
-                          # Ejecución en /var/www/html/appcauldron/commands.php
-                          ├── docker_ps.sh
-                          ├── docker_container_ls.sh
-                          ├── docker-compose_ls.sh
-                          ├── docker_network_ls.sh
-                          ├── docker_volume_ls.sh
-                          ├── docker_images.sh
-                          # Botones /var/www/html/appcauldron.com/commands.php
-                          ├── delete_stopped_containers.sh
-                          ├── delete_containers.sh
-                          ├── delete_active_containers.sh
-                          ├── delete_anon_networks.sh
-                          ├── delete_anon_vols.sh
-                          └── delete_volumes.sh
-                      └── images/
-                          ├── delete_anon_vols.sh
-                      └── css/
-                          └── appcauldron-style.css
+## ⚙️ Requisitos e instalación desde 0:
 
-
-├── scripts/ # Scripts de automatización (bash)
-├── templates/ # Plantillas YAML para servicios
-├── public/ # Interfaz web (PHP + HTML)
-├── spell.yaml # Ejemplo de salida generada
-├── grimoire.txt # Documentación dinámica generada
-├── README.md
-└── LICENSE.md
-
-```
----
-
-## ⚙️ Requisitos
-
-- Instalar [Ubuntu 22.04.1 Desktop](https://old-releases.ubuntu.com/releases/22.04.1/ubuntu-22.04.1-desktop-amd64.iso)
+# Instalar [Ubuntu 22.04.1 Desktop](https://old-releases.ubuntu.com/releases/22.04.1/ubuntu-22.04.1-desktop-amd64.iso)
 
 Nombre de equipo y usuario: appcauldron
 
 
-- Instalar Apache2
+# Instalar Apache2
 
 Instalamos y comprobamos apache2
 ```
@@ -217,7 +142,7 @@ sudo ufw status
 ```
 
 
-- Servidor Virtual
+# Configurar Servidor Virtual
 
 Creamos el directorio que contendrá la web, un index.html de prueba y damos permisos a www-data:
 ```
@@ -281,7 +206,7 @@ Añadimos:
 www-data ALL=(appcauldron) NOPASSWD: /var/www/html/appcauldron.com/scripts/
 ```
 
-- Docker + docker-compose
+# Instalar Docker y docker-compose
 Instalamos los paquetes necesarios para instalar el repositorio de docker:
 ```
 sudo apt install -y ca-certificates curl gnupg lsb-release
@@ -318,7 +243,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
 
-- MariaDB y PHP:
+# Instalar MariaDB y PHP:
 
 Instalamos mariadb-server con el comando:
 ```
@@ -351,50 +276,41 @@ Contenido testphp.php:
   phpinfo();
 ```
 
-
-
+Comprobamos que accedemos correctamente a http://appcauldron/testphp.php
 
 ---
 
-## 📦 Servicios utilizados y disponibles en AppCauldron
+## Servicios utilizados y disponibles en AppCauldron
 
 A través de los enlaces podéis acceder a las imágenes utilizadas y su documentación:
 
-- 🧱 [MySQL – Imagen Oficial](https://hub.docker.com/_/mysql) – Base de Datos
-- 🖥️ [Nginx - Imagen Oficial](https://hub.docker.com/_/nginx) – Servidor Web
-- 🧰 [Pure-FTPd - Imagen Andrew Stilliard](https://github.com/stilliard/docker-pure-ftpd) – Servidor FTP
-- 🔎 [Netdata - Imagen Oficial](https://hub.docker.com/r/netdata/netdata) – Monitorización
-- 🎓 [Moodle - Imagen Bitnami](https://github.com/bitnami/containers/tree/main/bitnami/moodle) – Gestión de aprendizaje
-- 📡 [Jitsi Meet - Imagen Oficial](https://github.com/jitsi/docker-jitsi-meet) – Videoconferencia
-- 🌐 [Wordpress - Imagen Oficial](https://hub.docker.com/_/wordpress) – Wordpress
-- 📝 [WPS Office - Imagen linuxserver.io](https://hub.docker.com/r/linuxserver/wps-office) – Office
+- [MySQL – Imagen Oficial](https://hub.docker.com/_/mysql) – Base de Datos
+- [Nginx - Imagen Oficial](https://hub.docker.com/_/nginx) – Servidor Web
+- [Pure-FTPd - Imagen Andrew Stilliard](https://github.com/stilliard/docker-pure-ftpd) – Servidor FTP
+- [Netdata - Imagen Oficial](https://hub.docker.com/r/netdata/netdata) – Monitorización
+- [Moodle - Imagen Bitnami](https://github.com/bitnami/containers/tree/main/bitnami/moodle) – Gestión de aprendizaje
+- [Jitsi Meet - Imagen Oficial](https://github.com/jitsi/docker-jitsi-meet) – Videoconferencia
+- [Wordpress - Imagen Oficial](https://hub.docker.com/_/wordpress) – Wordpress
+  [WPS Office - Imagen linuxserver.io](https://hub.docker.com/r/linuxserver/wps-office) – Office
 
 ---
 
-## 🧪 Casos de uso
-
-- Prácticas de estudiantes en administración de sistemas y DevOps.
-- Laboratorios educativos sobre contenedores Docker.
-- Presentación de proyectos personales o prototipos.
-
----
-
-## 📜 Licencia
+## Licencia
 
 Este proyecto se publica bajo una licencia personalizada de **uso educativo y no comercial**.  
 Consulta el archivo [LICENSE.md](LICENSE.md) para más detalles.
 
 ---
 
-## 👤 Autor
+## Autor
 
 **Francisco Javier Loscos Gil**  
 Proyecto final – IES Pablo Serrano, 2024  
-📧 meterre@gmail.com
+Email: meterre@gmail.com
 
 ---
 
-## 🌐 Enlaces
+## Enlaces
 
-- [Presentación del proyecto (PPTX)](https://github.com/Metr81/appcauldron/assets/presentacion)
-- [Documentación técnica (PDF)](https://github.com/Metr81/appcauldron/assets/memoria)
+- [Presentación del proyecto (PPTX)](assets/LoscosGil_FranciscoJavier_Presentacion_AppCauldron.pptx)
+- [Documentación técnica (PDF)](assets/Loscos_Gil_FranciscoJavier_Memoria_Proyecto.pdf)
