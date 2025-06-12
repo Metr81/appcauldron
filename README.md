@@ -4,6 +4,17 @@ Proyecto final del Ciclo de Grado Superior en Administración de Sistemas Inform
 
 ---
 
+## Tabla de contenidos
+
+- [¿Qué es AppCauldron?](#qué-es-appcauldron)
+- [Funcionamiento](#funcionamiento)
+- [Requisitos e instalación desde 0](#requisitos-e-instalación-desde-0)
+- [Servicios utilizados y disponibles en AppCauldron](#servicios-utilizados-y-disponibles-en-appcauldron)
+- [Licencia](#licencia)
+- [Autor](#autor)
+
+---
+
 ## ¿Qué es AppCauldron?
 
 AppCauldron es una solución web construida con Apache, PHP y bash scripting que permite seleccionar servicios como Moodle, Wordpress, MySQL, entre otros, desde un formulario web denominado "The Cauldron" (Ilustración A).
@@ -106,7 +117,7 @@ Se ha trabajado en una forma modular que permita escalar fácilmente la cantidad
 
 ---
 
-## ⚙️ Requisitos e instalación desde 0:
+## Requisitos e instalación desde 0
 
 # Instalar [Ubuntu 22.04.1 Desktop](https://old-releases.ubuntu.com/releases/22.04.1/ubuntu-22.04.1-desktop-amd64.iso)
 
