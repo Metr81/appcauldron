@@ -39,8 +39,6 @@ Adicionalmente, desde la propia interfaz web podremos:
 
 Se ha trabajado en una forma modular que permita escalar fácilmente la cantidad de servicios, su puesta en marcha y su documentación a través de la carpeta templates del proyecto.
 
-Mira el video en [YouTube](https://www.youtube.com/watch?v=cmRlwfBTbLg)
-
 Mejoras que se querrían añadir en un futuro:
 
 - Apartado visual.
@@ -54,6 +52,8 @@ Mejoras que se querrían añadir en un futuro:
 - “Hechizos avanzados”, poder elegir varios aspectos en el formulario de creación, como el nombre de proyecto, nombres de usuarios a crear o contraseñas, selección de puertos, etc.
 
 - Crear un apartado de enlaces a tutoriales y documentación.
+
+[↑ Volver al inicio](#appcauldron---elabora-tu-aplicación-web)
 
 ---
 
@@ -114,6 +114,8 @@ Se ha trabajado en una forma modular que permita escalar fácilmente la cantidad
   <br>
   <em>Ilustración E - Directorio /var/www/html/appcauldron.com</em>
 </p>
+
+[↑ Volver al inicio](#appcauldron---elabora-tu-aplicación-web)
 
 ---
 
@@ -289,6 +291,8 @@ Contenido testphp.php:
 
 Comprobamos que accedemos correctamente a http://appcauldron/testphp.php
 
+[↑ Volver al inicio](#appcauldron---elabora-tu-aplicación-web)
+
 ---
 
 ## Servicios utilizados y disponibles en AppCauldron
@@ -304,12 +308,16 @@ A través de los enlaces podéis acceder a las imágenes utilizadas y su documen
 - [Wordpress - Imagen Oficial](https://hub.docker.com/_/wordpress) – Wordpress
   [WPS Office - Imagen linuxserver.io](https://hub.docker.com/r/linuxserver/wps-office) – Office
 
+[↑ Volver al inicio](#appcauldron---elabora-tu-aplicación-web)
+
 ---
 
 ## Licencia
 
 Este proyecto se publica bajo una licencia personalizada de **uso educativo y no comercial**.  
 Consulta el archivo [LICENSE.md](LICENSE.md) para más detalles.
+
+[↑ Volver al inicio](#appcauldron---elabora-tu-aplicación-web)
 
 ---
 
@@ -318,3 +326,5 @@ Consulta el archivo [LICENSE.md](LICENSE.md) para más detalles.
 **Francisco Javier Loscos Gil**  
 Proyecto final – IES Pablo Serrano, 2024  
 Email: meterre@gmail.com
+
+[↑ Volver al inicio](#appcauldron---elabora-tu-aplicación-web)
