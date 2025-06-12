@@ -6,29 +6,96 @@ Proyecto final del Ciclo de Grado Superior en Administración de Sistemas Inform
 
 ## ¿Qué es AppCauldron?
 
-AppCauldron es una solución web construida con Apache, PHP y Bash scripting que permite seleccionar servicios como Moodle, Wordpress, MySQL, entre otros, desde un formulario web denominado "The Cauldron".
+AppCauldron es una solución web construida con Apache, PHP y bash scripting que permite seleccionar servicios como Moodle, Wordpress, MySQL, entre otros, desde un formulario web denominado "The Cauldron" (Ilustración A).
 
+Generaremos un archivo spell.yaml para poder iniciar con docker-compose contenedores con las imágenes de los servicios seleccionados y sus instrucciones, utilizando únicamente la interfaz web de forma rápida y cómoda.
 
+Por la similitud a arrojar ingredientes (servicios) en un caldero para crear un hechizo, la hemos denominado AppCauldron.
+
+<p align="center">
+  <img src="assets/IlustracionA.png" alt="Ilustración A"/>
+  <br>
+  <em>Ilustración A - Vista de la página 'The Cauldron'.</em>
+</p>
+
+Adicionalmente, desde la propia interfaz web podremos:
+
+- Parar los servicios, reanudarlos, eliminar los contenedores o eliminar el archivo.
+
+- Consultar las instrucciones de uso de los servicios seleccionados.
+
+- Consultar la salida de los principales comandos que se utilizan en Docker y que se lanzan a través de scripts.
+
+Se ha trabajado en una forma modular que permita escalar fácilmente la cantidad de servicios, su puesta en marcha y su documentación a través de la carpeta templates del proyecto.
+
+Mejoras que se querrían añadir en un futuro:
+
+- Apartado visual.
+
+- Generar una imagen de Docker con Dockerfile y subirlo a Docker Hub o a GitHub.
+
+- Trabajar en una documentación o sistema para que cualquiera añada aplicaciones al formulario de una manera fácil.
+
+- Poder generar varios hechizos o ficheros de configuración.
+
+- “Hechizos avanzados”, poder elegir varios aspectos en el formulario de creación, como el nombre de proyecto, nombres de usuarios a crear o contraseñas, selección de puertos, etc.
+
+- Crear un apartado de enlaces a tutoriales y documentación.
 
 ---
 
 ## 🧩 Funcionamiento
 
+En el menú "The Cauldron" (Ilustración A) seleccionamos los servicios que queremos iniciar.
+
 Al usuario apache www-data se le ha dado permiso para lanzar scripts de una carpeta concreta como usuario del sistema.
+
 A continuación, se lanza un script (magic_cauldron.sh) que recibe las variables correspondientes a la selección a través del formulario.
+
 Conforme a ellas añade código a través de una plantilla preparada para cada servicio con la configuración adecuada.
+
 Esto da forma a un archivo, spell.yaml, que hemos denominado hechizo, y que nos permitirá con el comando docker-compose iniciar los contenedores que contengan las imágenes de los servicios deseados.
+
 Adicionalmente generamos un archivo grimoire.txt con las instrucciones de uso.
+
 Por la magnitud y complejidad a la que se puede llegar, se ha decidido configurar un total de 8 servicios basados en imágenes Docker disponibles online.
+
 Algunos requieren servicios adicionales para su correcto funcionamiento, llegando a desplegar hasta 14 contenedores actualmente.
+
 Se ha realizado un trabajo de configuración y revisión de puertos para que puedan convivir todas a la vez en una misma red de Docker.
+
 Para llevar más allá a AppCauldron, desde el menú “Hechizos” (Ilustración B) se han habilitado botones para lanzar el comando docker-compose con nuestro archivo generado, iniciando así los servicios en contenedores.
+
+<p align="center">
+  <img src="assets/IlustracionA.png" alt="Ilustración B"/>
+  <br>
+  <em>Ilustración B - Vista de la página 'Hechizos'.</em>
+</p>
+
 Adicionalmente, podemos parar los servicios, reanudarlos, eliminar los contenedores o eliminar el hechizo.
+
 Desde el menú Grimorio (Ilustración C), podemos consultar la información (el archivo grimoire.txt generado previamente) para revisar que el servicio o servicios seleccionados están funcionando.
+
+<p align="center">
+  <img src="assets/IlustracionA.png" alt="Ilustración C"/>
+  <br>
+  <em>Ilustración C - Vista de la página 'Grimorio'.</em>
+</p>
+
 Se puede acceder a la información de puertos, usuarios, contraseñas y comandos de terminal para acceder directamente a los servicios, o enlaces a las imágenes y la documentación oficiales.
+
 Finalmente, desde el menú Contemplar el Universo (Ilustración D), se puede consultar la salida de los principales comandos que se utilizan en Docker y que se lanzan a través de scripts por el usuario www-data.
+
+<p align="center">
+  <img src="assets/IlustracionA.png" alt="Ilustración D"/>
+  <br>
+  <em>Ilustración D - Vista de la página 'Contemplar el Universo'.</em>
+</p>
+
 Es posible eliminar parte o toda la información de los contenedores, volúmenes, redes e imágenes a través de botones, convirtiendo a AppCauldron en una herramienta ágil para trabajar, y comprender de manera muy visual el funcionamiento de Docker y docker-compose.
+
 Se ha trabajado en una forma modular que permita escalar fácilmente la cantidad de servicios, su puesta en marcha y su documentación a través de la carpeta templates del proyecto, como se puede observar en la Ilustración E.
+
 
 - Generación automática de configuración `docker-compose.yaml` según servicios seleccionados.
 - Documentación dinámica de los servicios (usuarios, contraseñas, enlaces).
