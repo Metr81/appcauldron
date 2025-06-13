@@ -1,0 +1,16 @@
+Servidor FTP (Pure-FTPd - Imagen Andrew Stilliard)
+==================================================
+
+TEST: Acceder al ftp por el puerto 21 con el usuario y contraseña proporcionados.
+
+Usuario: appcauldron
+Contraseña: asir123
+
+El servidor FTP está configurado para almacenar los archivos utilizando la ruta local:
+/var/www/html/pure-ftpd/data
+
+Puedes comprobar el funcionamiento desde un terminal con:
+ftp ftp://appcauldron:asir123@appcauldron
+
+Pure-FTPd - Imagen Andrew Stilliard:
+[enlace:https://github.com/stilliard/docker-pure-ftpd]

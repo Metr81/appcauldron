@@ -1,0 +1,45 @@
+Gestión de aprendizaje (Moodle - Imagen Bitnami)
+================================================
+
+TEST:
+- Acceder a base de datos mariadb por el puerto 3311 con usuario proporcionado:
+
+Usuario: root
+
+Usuario: appcauldron_db
+
+Tiene que haber creado la base de datos para moodle:
+appcauldron-db_moodle
+
+Con usuario root:
+Prueba de conexión. Mostramos las bases de datos y los usuarios.
+mysql -P 3311 -u root -e 'SHOW DATABASES; SELECT user,host FROM mysql.user;'
+
+Abrir una sesión:
+mysql -P 3311 u root
+
+Con usuario appcauldron_db:
+Prueba de conexión. Mostramos las bases de datos.
+mysql -P 3311 -u appcauldron_db -e 'SHOW DATABASES;'
+
+Abrir una sesión:
+mysql -P 3311 -u appcauldron_db
+
+- Conectar con Moodle por el puerto 8100 (HTTP) o 8444 (HTTPS) con las credenciales proporcionadas:
+
+Usuario: appcauldron
+Contraseña: asir123
+
+ADVERTENCIA:
+En la primera ejecución, tarda unos minutos en instalar y estar disponible el Moodle.
+
+Moodle:
+[enlace:http://appcauldron:8100/]
+[enlace:https://appcauldron:8444/]
+
+Moodle login:
+[enlace:http://appcauldron:8100/login/index.php]
+[enlace:https://appcauldron:8444/login/index.php]
+
+Moodle - Imagen Bitnami:
+[enlace:https://github.com/bitnami/containers/tree/main/bitnami/moodle]

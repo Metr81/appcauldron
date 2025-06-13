@@ -1,0 +1,44 @@
+services:
+  db_moodle:
+    image: docker.io/bitnami/mariadb:latest
+    restart: unless-stopped
+    ports:
+      - '3311:3306'
+    environment:
+    # ALLOW_EMPTY_PASSWORD is recommended only for development.
+    - ALLOW_EMPTY_PASSWORD=yes
+    - MARIADB_USER=appcauldron_db
+    - MARIADB_DATABASE=appcauldron-db_moodle
+    - MARIADB_CHARACTER_SET=utf8mb4
+    - MARIADB_COLLATE=utf8mb4_unicode_ci
+    volumes:
+      - db_moodle-volume:/bitnami/mariadb
+
+  moodle:
+    image: docker.io/bitnami/moodle:latest
+    ports:
+      - '8100:8080'
+      - '8444:8443'
+    environment:
+    - MOODLE_DATABASE_HOST=db_moodle
+    - MOODLE_DATABASE_PORT_NUMBER=3306
+    - MOODLE_DATABASE_USER=appcauldron_db
+    - MOODLE_DATABASE_NAME=appcauldron-db_moodle
+    - MOODLE_USERNAME=appcauldron
+    - MOODLE_PASSWORD=asir123
+    - MOODLE_SITE_NAME=App Cauldron Moodle
+    # ALLOW_EMPTY_PASSWORD is recommended only for development.
+    - ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - moodle-volume:/bitnami/moodle
+      - moodledata-volume:/bitnami/moodledata
+    depends_on:
+      - db_moodle
+
+volumes:
+  db_moodle-volume:
+  moodle-volume:
+  moodledata-volume:
+
+networks:
+    network:

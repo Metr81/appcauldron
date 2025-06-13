@@ -1,0 +1,17 @@
+Office (WPS Office - Imagen linuxserver.io)
+===========================================
+
+TEST: Acceder a WPS Office por el puerto 3000 (HTTP) o el puerto 3001 (HTTPS).
+
+Se han mapeado las siguientes carpetas del home del usuario:
+~/Documentos:/config/Documents
+~/Escritorio:/config/Desktop
+~/Configuracion:/config
+
+Enlaces:
+
+[enlace:http://appcauldron:3000/]
+[enlace:https://appcauldron:3001/]
+
+WPS Office - Imagen linuxserver.io:
+[enlace:https://hub.docker.com/r/linuxserver/wps-office]

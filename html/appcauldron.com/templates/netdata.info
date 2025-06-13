@@ -1,0 +1,13 @@
+Monitorización (Netdata - Imagen Oficial)
+=========================================
+
+TEST: Acceder al dashboard a través del puerto 19999
+
+Versión v1:
+[enlace:http://appcauldron:19999/v1/]
+
+Versión v2:
+[enlace:http://appcauldron:19999/v2/]
+
+Netdata - Imagen Oficial:
+[enlace:https://hub.docker.com/r/netdata/netdata]

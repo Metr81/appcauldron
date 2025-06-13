@@ -1,0 +1,19 @@
+Videoconferencia (Jitsi Meet - Imagen Oficial)
+==============================================
+
+TEST: Acceder a Jitsi Meet por el puerto 8443 (HTTPS).
+Se puede entrar por el puerto 8000 (HTTP) pero no funcionaría el micrófono y la cámara.
+
+Comprobar que se puede iniciar una reunión y funciona correctamente.
+
+El archivo de configuración .env se encuentra en:
+/var/www/html/appcauldron.com/generatedfiles/.env
+
+En el se indican los puertos que se configuran entre otros ajustes.
+
+Enlaces:
+[enlace:http://appcauldron:8000]
+[enlace:https://appcauldron:8443]
+
+Jitsi Meet - Imagen Oficial:
+[enlace:https://github.com/jitsi/docker-jitsi-meet]

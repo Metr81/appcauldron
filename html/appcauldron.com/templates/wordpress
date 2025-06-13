@@ -1,0 +1,44 @@
+  db_wordpress:
+    image: mariadb:latest
+    restart: unless-stopped
+    ports:
+      - '3312:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: 'asir123'
+      MYSQL_DATABASE: 'appcauldron-db_wordpress'
+      MYSQL_USER: 'appcauldron'
+      MYSQL_PASSWORD: 'asir123'
+    volumes:
+      - db_wordpress-volume:/var/lib/mysql
+    networks:
+        network:
+
+  phpmyadmin:
+    depends_on:
+      - db_wordpress
+    image: phpmyadmin/phpmyadmin
+    restart: unless-stopped
+    ports:
+      - '8301:80'
+    environment:
+      PMA_HOST: 'db_wordpress'
+      MYSQL_ROOT_PASSWORD: 'asir123'
+    networks:
+        network:
+
+  wordpress:
+    depends_on:
+      - db_wordpress
+    image: wordpress:latest
+    restart: unless-stopped
+    ports:
+      - '8300:80'
+    environment:
+      WORDPRESS_DB_HOST: 'db_wordpress:3306'
+      WORDPRESS_DB_NAME: 'appcauldron-db_wordpress'
+      WORDPRESS_DB_USER: 'appcauldron'
+      WORDPRESS_DB_PASSWORD: 'asir123'
+    volumes:
+      - /var/www/html/wordpress/wp-content/:/var/www/html/wp-content
+    networks:
+        network:

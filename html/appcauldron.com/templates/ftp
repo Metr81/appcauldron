@@ -1,0 +1,13 @@
+  ftp:
+    image: stilliard/pure-ftpd:hardened
+    ports:
+      - '21:21'
+      - '20:20'
+      - '30000-30009:30000-30009'
+    environment:
+      PUBLICHOST: 'localhost'
+      FTP_USER_NAME: 'appcauldron'
+      FTP_USER_PASS: 'asir123'
+      FTP_USER_HOME: '/var/www/html/pure-ftpd'
+    volumes:
+      - /var/www/html/pure-ftpd/data:/var/www/html/pure-ftpd

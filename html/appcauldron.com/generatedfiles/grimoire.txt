@@ -1,0 +1,45 @@
+Base de Datos (MySQL - Imagen Oficial)
+======================================
+
+TEST: Acceder a base de datos mysql por el puerto 3310 con usuario y contraseña proporcionados.
+
+Usuario: root
+Contraseña: asir123
+
+Usuario: appcauldron
+Contraseña: asir123
+
+Tiene que haber creado la base de datos de prueba:
+appcauldron-db_mysql
+
+En un terminal:
+
+Con usuario root:
+Prueba de conexión. Mostramos las bases de datos y los usuarios.
+mysql -P 3310 -u root --password=asir123 -e 'SHOW DATABASES; SELECT user,host FROM mysql.user;'
+
+Abrir una sesión:
+mysql -P 3310 -u root --password=asir123
+
+Con usuario appcauldron:
+Prueba de conexión. Mostramos las bases de datos.
+mysql -P 3310 -u appcauldron --password=asir123 -e 'SHOW DATABASES;'
+
+Abrir una sesión:
+mysql -P 3310 -u appcauldron --password=asir123
+
+MySQL - Imagen Oficial:
+[enlace:https://hub.docker.com/_/mysql]
+
+Servidor Web (Nginx - Imagen Oficial)
+=====================================
+
+TEST: Comprobar visualización página web nginx alojada en nuestro host en: /var/www/html/nginx a través del puerto 9090.
+
+Está preparado para abrir el documento index.html situado en la ruta actualmente o lo que hayamos incluido.
+
+[enlace:http://appcauldron:8090]
+
+Nginx - Imagen Oficial:
+[enlace:https://hub.docker.com/_/nginx]
+

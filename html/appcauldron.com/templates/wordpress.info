@@ -1,0 +1,62 @@
+Wordpress (Wordpress - Imagen Oficial)
+======================================
+
+TEST:
+- Acceder a base de datos mysql por el puerto 3312 con usuario y contraseña proporcionados.
+
+Usuario: root
+Contraseña: asir123
+
+Usuario: appcauldron
+Contraseña: asir123
+
+Tiene que haber creado la base de datos para wordpress:
+appcauldron-db_wordpress
+
+Con usuario root:
+Prueba de conexión. Mostramos las bases de datos y los usuarios.
+mysql -P 3312 -u root --password=asir123 -e 'SHOW DATABASES; SELECT user,host FROM mysql.user;'
+
+Abrir una sesión:
+mysql -P 3312 -u root --password=asir123
+
+Con usuario appcauldron:
+Prueba de conexión. Mostramos las bases de datos.
+mysql -P 3312 -u appcauldron --password=asir123 -e 'SHOW DATABASES;'
+
+Abrir una sesión:
+mysql -P 3312 -u appcauldron --password=asir123
+
+- Acceder a phpMyAdmin por el puerto 8301 con usuario y contraseña proporcionados.
+
+Usuario: root
+Contraseña: asir123
+
+Usuario: appcauldron
+Contraseña: asir123
+
+Tiene que haber creado la base de datos para wordpress:
+appcauldron-db_wordpress
+
+[enlace:http://appcauldron:8301]
+
+- Acceder a Wordpress por el puerto 8300:
+
+La primera vez nos abrirá:
+[enlace:http://appcauldron:8300/wp-admin/install.php]
+
+Seleccionamos idioma.
+
+Seleccionamos nombre del sitio, usuario, contraseña (marcamos confirmación si es debil) e ingresamos un correo.
+
+Con el usuario podremos iniciar sesión en:
+[enlace:http://appcauldron:8300/wp-admin/]
+
+Nuestro wordpress estará disponible en:
+[enlace:http://appcauldron:8300]
+
+Se ha mapeado la ruta de wp-content para que pueda modificarse desde local:
+/var/www/html/wordpress/wp-content/
+
+Wordpress - Imagen Oficial:
+[enlace:https://hub.docker.com/_/wordpress]

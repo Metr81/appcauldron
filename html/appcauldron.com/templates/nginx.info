@@ -1,0 +1,11 @@
+Servidor Web (Nginx - Imagen Oficial)
+=====================================
+
+TEST: Comprobar visualización página web nginx alojada en nuestro host en: /var/www/html/nginx a través del puerto 9090.
+
+Está preparado para abrir el documento index.html situado en la ruta actualmente o lo que hayamos incluido.
+
+[enlace:http://appcauldron:8090]
+
+Nginx - Imagen Oficial:
+[enlace:https://hub.docker.com/_/nginx]
