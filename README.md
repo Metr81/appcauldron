@@ -8,7 +8,7 @@ Proyecto final del Ciclo de Grado Superior en Administración de Sistemas Inform
 
 - [¿Qué es AppCauldron?](#qué-es-appcauldron)
 - [Funcionamiento](#funcionamiento)
-- [Descargar OVA generada con VirtualBox](#descargar-ova-generada-con-appcauldron)
+- [Descargar OVA generada con VirtualBox](#descargar-ova-generada-con-virtualbox)
 - [Requisitos e instalación desde 0](#requisitos-e-instalación-desde-0)
 - [Servicios utilizados y disponibles en AppCauldron](#servicios-utilizados-y-disponibles-en-appcauldron)
 - [Licencia](#licencia)
