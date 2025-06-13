@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>App Cauldron</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/appcauldron-style.css">
+
+<script>
+
+function validateForm(event) {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    var isChecked = false;
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            isChecked = true;
+            break;
+        }
+    }
+    if (!isChecked) {
+        event.preventDefault(); // Evita el envío del formulario
+        alert('Debes seleccionar al menos una opción.');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('ingredientes');
+    form.addEventListener('submit', validateForm);
+});
+
+</script>
+
+</head>
+<body>
+
+<div class="header">
+  <h1></h1>
+</div>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="cauldron.html">The Cauldron</a>
+  <a href="spells.php">Hechizos</a>
+  <a href="grimoire.php">Grimorio</a>
+  <a href="info.html">Info</a>
+  <a href="commands.php" class="right">Contemplar el Universo</a>
+</div>
+
+<div class="row">
+	<div class="side">
+	Selecciona los ingredientes de tu aplicación web
+	<br>
+	</div>
+	<div class="main">
+	<form id="ingredientes" action="cauldron2.php" method="post">
+	<input type="checkbox" id="ch1" name="bbdd" value="bbdd">
+	<label for="ch1">Base de Datos (MySQL - Imagen Oficial)</label>
+	<br>
+	<br>
+	<input type="checkbox" id="ch2" name="nginx" value="nginx">
+	<label for="ch2">Servidor Web (Nginx - Imagen Oficial)</label>
+	<br>
+	<br>
+        <input type="checkbox" id="ch3" name="ftp" value="ftp">
+        <label for="ch3">Servidor FTP (Pure-FTPd - Imagen Andrew Stilliard)</label>
+        <br>
+        <br>
+        <input type="checkbox" id="ch4" name="netdata" value="netdata">
+        <label for="ch4">Monitorización (Netdata - Imagen Oficial)</label>
+        <br>
+        <br>
+        <input type="checkbox" id="ch5" name="lms" value="lms">
+        <label for="ch5">Gestión de aprendizaje (Moodle - Imagen Bitnami)</label>
+        <br>
+        <br>
+        <input type="checkbox" id="ch6" name="video" value="video">
+        <label for="ch8">Videoconferencia (Jitsi Meet - Imagen Oficial)</label>
+        <br>
+        <br>
+        <input type="checkbox" id="ch7" name="wordpress" value="wordpress">
+        <label for="ch9">Wordpress (Wordpress - Imagen Oficial)</label>
+        <br>
+        <br>
+        <input type="checkbox" id="ch8" name="office" value="office">
+        <label for="ch10">Office (WPS Office - Imagen linuxserver.io)</label>
+        <br>
+        <br>
+	<input type="submit" name="submit" value="Arrojar al caldero">
+	</div>
+</div>	
+
+</body>
+</html>
