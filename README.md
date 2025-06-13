@@ -119,6 +119,12 @@ Se ha trabajado en una forma modular que permita escalar fácilmente la cantidad
 
 ---
 
+## Descargar OVA generada con VirtualBox:
+
+[AppCauldron_Ubuntu2204.ova](https://drive.google.com/file/d/1tT4H0u_JMQ-__gg98vig2dau-uKZmtvu/view?usp=sharing)
+
+---
+
 ## Requisitos e instalación desde 0
 
 # Instalar [Ubuntu 22.04.1 Desktop](https://old-releases.ubuntu.com/releases/22.04.1/ubuntu-22.04.1-desktop-amd64.iso)
@@ -292,6 +298,35 @@ Contenido testphp.php:
 ```
 
 Comprobamos que accedemos correctamente a http://appcauldron/testphp.php
+
+
+# Clonar el repositorio
+```
+git clone https://github.com/Metr81/appcauldron.git
+```
+
+Accedemos a appcauldron y copiamos el contenido de la carpeta html en /var/www/html/ y cambiamos los permisos:
+```
+cd appcauldron
+sudo cp -r html/* /var/www/html/
+sudo chown -R www-data:www-data /var/www/html/
+```
+
+Copiar el contenido de la carpeta UserHome en el hombe del usuario appcauldron /home/appcauldron y cambiamos los permisos:
+```
+sudo cp -r UserHome/* /home/appcauldron/
+sudo chown -R appcauldron:appcauldron /home/appcauldron/
+```
+
+# Configurar Jitsi:
+```
+cd ~/Descargas/jitsi/jitsi-docker-jitsi-meet-2423033
+cp env.example .env
+./gen-passwords.sh
+mkdir -p ~/.jitsi-meet-cfg/{web,transcripts,prosody/config,prosody/prosody-pluginscustom,jicofo,jvb,jigasi,jibri}
+cp .env /var/www/html/appcauldron.com/generatedfiles/.env
+```
+
 
 [↑ Volver al inicio](#appcauldron---elabora-tu-aplicación-web)
 
