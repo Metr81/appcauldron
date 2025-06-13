@@ -8,6 +8,7 @@ Proyecto final del Ciclo de Grado Superior en Administración de Sistemas Inform
 
 - [¿Qué es AppCauldron?](#qué-es-appcauldron)
 - [Funcionamiento](#funcionamiento)
+- [Descargar OVA generada con VirtualBox](#descargar-ova-generada-con-appcauldron)
 - [Requisitos e instalación desde 0](#requisitos-e-instalación-desde-0)
 - [Servicios utilizados y disponibles en AppCauldron](#servicios-utilizados-y-disponibles-en-appcauldron)
 - [Licencia](#licencia)
@@ -119,9 +120,15 @@ Se ha trabajado en una forma modular que permita escalar fácilmente la cantidad
 
 ---
 
-## Descargar OVA generada con VirtualBox:
+## Descargar OVA generada con VirtualBox
 
 [AppCauldron_Ubuntu2204.ova](https://drive.google.com/file/d/1tT4H0u_JMQ-__gg98vig2dau-uKZmtvu/view?usp=sharing)
+
+Nombre de equipo y usuario: appcauldron
+
+Contraseña utilizada: asir123
+
+Botón derecho y selecciona "Abrir en nueva pestaña" o se abrirá en esta ventana.
 
 ---
 
