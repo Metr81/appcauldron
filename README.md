@@ -122,13 +122,13 @@ Se ha trabajado en una forma modular que permita escalar fácilmente la cantidad
 
 ## Descargar OVA generada con VirtualBox
 
+Botón derecho y selecciona "Abrir enlace en una pestaña nueva" o se abrirá en esta ventana.
+
 [AppCauldron_Ubuntu2204.ova](https://drive.google.com/file/d/1tT4H0u_JMQ-__gg98vig2dau-uKZmtvu/view?usp=sharing)
 
 Nombre de equipo y usuario: appcauldron
 
 Contraseña utilizada: asir123
-
-Botón derecho y selecciona "Abrir en nueva pestaña" o se abrirá en esta ventana.
 
 ---
 
