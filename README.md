@@ -125,6 +125,8 @@ Se ha trabajado en una forma modular que permita escalar fácilmente la cantidad
 
 Nombre de equipo y usuario: appcauldron
 
+Contraseña utilizada: asir123
+
 
 # Instalar Apache2
 
@@ -214,7 +216,7 @@ Damos permiso al usuario apache www-data para ejecutar scripts de la carpeta /va
 ```
 sudo nano /etc/sudoers
 ```
-Añadimos:
+En el apartado # User privilege specification añadimos:
 ```
 www-data ALL=(appcauldron) NOPASSWD: /var/www/html/appcauldron.com/scripts/
 ```
