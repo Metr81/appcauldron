@@ -180,7 +180,7 @@ Creamos el directorio que contendrá la web, un index.html de prueba y damos per
 ```
 sudo mkdir -p /var/www/html/appcauldron.com
 sudo touch /var/www/html/appcauldron.com/index.html
-sudo chown -R www.data: /var/www/html
+sudo chown -R www-data: /var/www/html
 sudo nano /var/www/html/appcauldron.com/index.html
 ```
 Contenido index.html:
