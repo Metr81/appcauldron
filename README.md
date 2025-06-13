@@ -126,19 +126,23 @@ Botón derecho y selecciona "Abrir enlace en una pestaña nueva" o se abrirá en
 
 [AppCauldron_Ubuntu2204.ova](https://drive.google.com/file/d/1tT4H0u_JMQ-__gg98vig2dau-uKZmtvu/view?usp=sharing)
 
-Nombre de equipo y usuario: appcauldron
+Nombre de equipo y usuario: `appcauldron`
 
-Contraseña utilizada: asir123
+Contraseña utilizada: `asir123`
 
 ---
 
 ## Requisitos e instalación desde 0
 
-# Instalar [Ubuntu 22.04.1 Desktop](https://old-releases.ubuntu.com/releases/22.04.1/ubuntu-22.04.1-desktop-amd64.iso)
+# Instalar Ubuntu 22.04.1 Desktop 
 
-Nombre de equipo y usuario: appcauldron
+Botón derecho y selecciona "Abrir enlace en una pestaña nueva" o se abrirá en esta ventana.
 
-Contraseña utilizada: asir123
+[Ubuntu 22.04.1 Desktop](https://old-releases.ubuntu.com/releases/22.04.1/ubuntu-22.04.1-desktop-amd64.iso)
+
+Nombre de equipo y usuario: `appcauldron`
+
+Contraseña utilizada: `asir123`
 
 
 # Instalar Apache2
@@ -319,7 +323,7 @@ sudo cp -r html/* /var/www/html/
 sudo chown -R www-data:www-data /var/www/html/
 ```
 
-Copiar el contenido de la carpeta UserHome en el hombe del usuario appcauldron /home/appcauldron y cambiamos los permisos:
+Copiar el contenido de la carpeta UserHome en el home del usuario appcauldron /home/appcauldron y cambiamos los permisos:
 ```
 sudo cp -r UserHome/* /home/appcauldron/
 sudo chown -R appcauldron:appcauldron /home/appcauldron/
