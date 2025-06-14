@@ -54,7 +54,13 @@ Mejoras que se querrían añadir en un futuro:
 
 - Crear un apartado de enlaces a tutoriales y documentación.
 
-Puedes ver un vídeo del funcionamiento:
+[↑ Volver al inicio](#appcauldron---elabora-tu-aplicación-web)
+
+---
+
+## Funcionamiento
+
+Aquí se puede ver un vídeo mostrando AppCauldron en funcionamiento:
 
 <p align="center">
   <a href="https://www.youtube.com/watch?v=xKvUgrMLDCQ">
@@ -62,11 +68,7 @@ Puedes ver un vídeo del funcionamiento:
   </a>
 </p>
 
-[↑ Volver al inicio](#appcauldron---elabora-tu-aplicación-web)
-
----
-
-## Funcionamiento
+<p align="center"><em>Haz clic en la imagen para ver la demo del proyecto en YouTube</em></p>
 
 En el menú "The Cauldron" (Ilustración A) seleccionamos los servicios que queremos iniciar.
 
