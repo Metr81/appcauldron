@@ -54,6 +54,14 @@ Mejoras que se querrían añadir en un futuro:
 
 - Crear un apartado de enlaces a tutoriales y documentación.
 
+Puedes ver un vídeo del funcionamiento:
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=xKvUgrMLDCQ">
+    <img src="https://img.youtube.com/vi/xKvUgrMLDCQ/0.jpg" alt="Demo del proyecto">
+  </a>
+</p>
+
 [↑ Volver al inicio](#appcauldron---elabora-tu-aplicación-web)
 
 ---
